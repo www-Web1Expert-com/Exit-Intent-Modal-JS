@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><title>Exit Intent</title>
+<style>#modal { display:none; position:fixed; top:20%; left:50%; transform:translate(-50%); background:#eee; padding:2rem; border:1px solid #000; }</style>
+</head>
+<body style="font-family: sans-serif; padding: 2rem; height: 100vh;">
+  <h1>Move mouse outside viewport vertically.</h1>
+  <div id="modal"><h2>Wait!</h2><p>Check out <a href="https://share-ask.com">Share-Ask.com</a></p></div>
+  <script>
+    document.addEventListener('mouseleave', e => {
+      if(e.clientY < 0) document.getElementById('modal').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
